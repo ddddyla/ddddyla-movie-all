@@ -1,0 +1,26 @@
+
+<view class="box">
+  <view class="item" bindtap="showInfo" data-id="{{item.id}}" hover-class="tapClass"
+  wx:for="{{moves}}" wx:key="{{item}}">
+    <image class="img" mode="aspectFit" src="{{item.images.large}}"></image>
+    <view class="movie-info">
+      <view class="movie-row">
+        <span class="content">{{item.title}}</span>
+      </view>
+      <view class="movie-row">
+        <span  class="label">导演:  </span>
+        <span class="label" wx:key="{{item.id}}"  wx:for="{{item.directors}}"  
+             wx:for-item="director">
+             <text class="cast-name">{{director.name}}</text>
+        </span>
+      </view>
+       <view class="movie-row">
+        <span  class="label">主演:  </span>
+        <span class="label" wx:key="{{item.id}}"  wx:for="{{item.casts}}"   
+             wx:for-item="cast">
+             <text class="cast-name">{{cast.name}}</text>
+        </span>
+      </view>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,55 @@
+<!--index.wxml-->
+<view class="box">
+
+  <!--轮播图-->
+  <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+    <block wx:for="{{imgUrls}}" wx:key="{{item}}">
+      <swiper-item>
+        <image src="{{item}}" />
+      </swiper-item>
+    </block>
+  </swiper>
+
+  <!--热映列表展示-->
+  
+   <view class="item" bindtap="showInfo" data-id="{{item.id}}" hover-class="tapClass"
+  wx:for="{{moves}}" wx:key="{{item}}">
+ 
+      <image class="img" mode="aspectFit" src="{{item.images.large}}"></image>
+ 
+      <view class="movie-info">
+      <view class="movie-row">
+        <span class="content">{{item.title}}</span>
+      </view>
+       
+ 
+        <view class="movie-row">
+          <text class="label">主演:</text>
+          <span class="label" wx:key="{{item.id}}"  wx:for="{{item.casts}}"
+             wx:for-item="cast">
+             <text class="cast-name">{{cast.name}}</text>
+          </span>
+        </view>
+ 
+        <view class="movie-row">
+          <text class="label">导演:</text>
+          <span class="label" wx:key="{{item.id}}"  wx:for="{{item.directors}}"  
+             wx:for-item="director">
+             <text class="cast-name">{{director.name}}</text>
+        </span>
+
+        </view>
+ 
+        <view class="movie-row">  
+        <text class="label">类型:</text>
+          <span class="label" wx:key="{{item.id}}"  wx:for="{{item.genres}}"
+         wx:for-item="item">
+             <text class="cast-name">{{item}}</text>
+             
+        </span>
+        </view>
+ 
+      </view>
+    </view>
+  </view>
+ 

@@ -1,0 +1,39 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/query/index",
+    "pages/moveTop/index",
+    "pages/detail/detail"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#F0F8FF",
+    "navigationBarTitleText": "ddddyla看电影",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "backgroundColor": "white",
+    "selectedcolor":"blue",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "当前热映",
+        "iconPath": "images/index.jpg",
+        "selectedIconPath": "images/index.jpg"
+      },
+      {
+        "pagePath": "pages/moveTop/index",
+        "text": "影片排行榜",
+        "iconPath": "images/moveTop.jpg",
+        "selectedIconPath": "images/moveTop.jpg"
+      },
+      {
+        "pagePath": "pages/query/index",
+        "text": "查询",
+        "iconPath": "images/query.jpg",
+        "selectedIconPath": "images/query.jpg"
+      }
+    ]
+  }
+}
